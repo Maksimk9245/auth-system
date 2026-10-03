@@ -35,7 +35,7 @@ export class AuthController {
 
   @Post('refresh')
   async refresh(@Body('refreshToken') refreshToken: string) {
-    console.log('--- ПРИШЕЛ ТОКЕН ИЗ ПОСТМАНА ---', refreshToken);
+    console.log(refreshToken);
 
     if (!refreshToken) {
       throw new UnauthorizedException('Refresh token is missing in the request body');
